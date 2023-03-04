@@ -1,0 +1,25 @@
+{
+  "name": "rugpt3-dataset-highlight",
+  "displayName": "rugpt3-dataset-highlight",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "rugpt3-dataset",
+      "aliases": ["ruGPT3 Dataset", "rugpt3-dataset"],
+      "extensions": [".txt"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "rugpt3-dataset",
+      "scopeName": "source.xml",
+      "path": "./syntaxes/rugpt3-dataset.tmLanguage.json"
+    }]
+  }
+}

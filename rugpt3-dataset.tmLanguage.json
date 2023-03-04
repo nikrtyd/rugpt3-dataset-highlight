@@ -1,0 +1,39 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "ruGPT3 Dataset",
+    "patterns": [
+        {
+            "include": "#entities"
+        },
+        {
+            "include": "#keywords"
+        }
+    ],
+    "repository": {
+        "entities": {
+            "patterns": [
+                {
+                    "name": "entity.name.tag.rugpt3-dataset",
+                    "match": "^<s>|<\\/s>$"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "entity.name.variable.rugpt3-dataset",
+                    "match": "(?<=<s>)(Пользователь|Юзер|User|Вопрос|Q):|^(Пользователь|Юзер|User|Вопрос|Q):"
+                },
+                {
+                    "name": "entity.name.variable.rugpt3-dataset",
+                    "match": "(?<=<s>)(ruGPT3|GPT3|Бот|Ответ|A):|^(ruGPT3|GPT3|Бот|Ответ|A):"
+                },
+                {
+                    "name": "constant.character.escape.rugpt3-dataset",
+                    "match": "\\\\n"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.xml"
+}
